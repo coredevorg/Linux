@@ -11,4 +11,6 @@ RUN echo "LC_ALL=${SYS_LANG}" >> /etc/environment && \
     ln -sf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata && \
     apt-get update && apt-get upgrade -yq && apt-get install -yq --no-install-recommends \
-         locales iproute2 iputils-ping net-tools vnstat procps lsof psmisc unzip vim nano mc wget curl jq gnupg ca-certificates
+         locales iproute2 iputils-ping net-tools vnstat procps lsof psmisc \
+         unzip vim nano mc wget curl jq gnupg ca-certificates less \
+         apt-transport-https dirmngr htop netcat sudo pwgen
